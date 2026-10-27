@@ -1,0 +1,847 @@
+{
+ "strategy": "trend_aggr",
+ "cash": 1.9961032161756123,
+ "positions": {
+  "BNBUSDT": {
+   "qty": 0.12982880108256595,
+   "entry": 752.61612,
+   "cost": 97.80905759260519,
+   "t": 1793114818905,
+   "bars": 0,
+   "stop": 743.9313105974737,
+   "trail_mult": 3.0,
+   "max_bars": null
+  }
+ },
+ "trades": [
+  {
+   "t": 1792865315611,
+   "sym": "BTCUSDT",
+   "side": "BUY",
+   "price": 80296.16801999998,
+   "qty": 0.0012441440539867,
+   "usdt": 100.0,
+   "fee": 0.1,
+   "reason": "btc_hold: buy BTC with all cash at live 80256.04 (+0.05% slippage, 0.1% fee)"
+  },
+  {
+   "t": 1792865855419,
+   "sym": "BTCUSDT",
+   "side": "SELL",
+   "price": 80300.239795,
+   "qty": 0.0012441440539867,
+   "usdt": 99.8051608087808,
+   "fee": 0.09990506587465545,
+   "pnl": -0.19483919121920223,
+   "pnl_pct": -0.19483919121920223,
+   "reason": "momentum loss: EMA20<EMA50 [forming bar + live price]"
+  },
+  {
+   "t": 1793114818905,
+   "sym": "BNBUSDT",
+   "side": "BUY",
+   "price": 752.61612,
+   "qty": 0.12982880108256595,
+   "usdt": 97.80905759260519,
+   "fee": 0.09780905759260519,
+   "reason": "strongest uptrend: EMA20>50, close>EMA20, mom24 +1.02%, close>24-bar high 747.4700, RSI 69.5 in filter range [forming bar + live price]"
+  }
+ ],
+ "equity_history": [
+  {
+   "run": "2026-10-25 01:56 UTC+0800",
+   "bar": "2026-10-25 00:00 UTC+0800",
+   "equity": 100.0,
+   "prices": {
+    "BTCUSDT": 80219.31,
+    "ETHUSDT": 2318.38,
+    "BNBUSDT": 724.69
+   }
+  },
+  {
+   "run": "2026-10-25 01:56 UTC+0800",
+   "bar": "2026-10-25 00:00 UTC+0800",
+   "equity": 100.0,
+   "prices": {
+    "BTCUSDT": 80219.31,
+    "ETHUSDT": 2318.38,
+    "BNBUSDT": 724.69
+   }
+  },
+  {
+   "run": "2026-10-25 02:02 UTC+0800",
+   "bar": "2026-10-25 01:00 UTC+0800",
+   "equity": 100.0,
+   "prices": {
+    "BTCUSDT": 80276.1,
+    "ETHUSDT": 2323.25,
+    "BNBUSDT": 725.55
+   }
+  },
+  {
+   "run": "2026-10-25 02:03:16 UTC+0800",
+   "bar": "live",
+   "equity": 100.0,
+   "prices": {
+    "BTCUSDT": 80255.28,
+    "ETHUSDT": 2323.74,
+    "BNBUSDT": 725.29
+   }
+  },
+  {
+   "run": "2026-10-25 02:03:58 UTC+0800",
+   "bar": "live",
+   "equity": 100.0,
+   "prices": {
+    "BTCUSDT": 80280.9,
+    "ETHUSDT": 2324.67,
+    "BNBUSDT": 725.64
+   }
+  },
+  {
+   "run": "2026-10-25 02:08:36 UTC+0800",
+   "bar": "live",
+   "equity": 99.8501,
+   "prices": {
+    "BTCUSDT": 80256.04
+   }
+  },
+  {
+   "run": "2026-10-25 02:13:36 UTC+0800",
+   "bar": "live",
+   "equity": 99.9741,
+   "prices": {
+    "BTCUSDT": 80355.76
+   }
+  },
+  {
+   "run": "2026-10-25 02:17:38 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80340.41,
+    "ETHUSDT": 2326.04,
+    "BNBUSDT": 726.41,
+    "SOLUSDT": 100.76
+   }
+  },
+  {
+   "run": "2026-10-25 02:22:38 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80319.97,
+    "ETHUSDT": 2324.94,
+    "BNBUSDT": 726.35,
+    "SOLUSDT": 100.77
+   }
+  },
+  {
+   "run": "2026-10-25 02:29:32 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80370.55,
+    "ETHUSDT": 2331.94,
+    "BNBUSDT": 727.31,
+    "SOLUSDT": 100.96
+   }
+  },
+  {
+   "run": "2026-10-25 07:32:16 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80710.42,
+    "ETHUSDT": 2351.47,
+    "BNBUSDT": 737.64,
+    "SOLUSDT": 102.13
+   }
+  },
+  {
+   "run": "2026-10-25 07:37:19 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80908.01,
+    "ETHUSDT": 2359.77,
+    "BNBUSDT": 739.61,
+    "SOLUSDT": 102.47
+   }
+  },
+  {
+   "run": "2026-10-25 07:45:25 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80860.0,
+    "ETHUSDT": 2357.73,
+    "BNBUSDT": 739.15,
+    "SOLUSDT": 102.38
+   }
+  },
+  {
+   "run": "2026-10-25 08:02:12 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80825.28,
+    "ETHUSDT": 2355.96,
+    "BNBUSDT": 739.07,
+    "SOLUSDT": 102.27
+   }
+  },
+  {
+   "run": "2026-10-25 08:07:13 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80811.53,
+    "ETHUSDT": 2357.1,
+    "BNBUSDT": 739.97,
+    "SOLUSDT": 102.31
+   }
+  },
+  {
+   "run": "2026-10-25 08:12:14 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80793.47,
+    "ETHUSDT": 2356.54,
+    "BNBUSDT": 739.03,
+    "SOLUSDT": 102.31
+   }
+  },
+  {
+   "run": "2026-10-25 08:18:31 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80789.74,
+    "ETHUSDT": 2356.09,
+    "BNBUSDT": 739.02,
+    "SOLUSDT": 102.3
+   }
+  },
+  {
+   "run": "2026-10-25 11:02:04 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80908.0,
+    "ETHUSDT": 2364.15,
+    "BNBUSDT": 744.23,
+    "SOLUSDT": 102.41
+   }
+  },
+  {
+   "run": "2026-10-25 11:07:04 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80947.12,
+    "ETHUSDT": 2365.95,
+    "BNBUSDT": 744.93,
+    "SOLUSDT": 102.46
+   }
+  },
+  {
+   "run": "2026-10-25 14:17:35 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80664.0,
+    "ETHUSDT": 2351.42,
+    "BNBUSDT": 744.87,
+    "SOLUSDT": 101.9
+   }
+  },
+  {
+   "run": "2026-10-25 14:22:39 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80668.96,
+    "ETHUSDT": 2352.12,
+    "BNBUSDT": 745.6,
+    "SOLUSDT": 101.97
+   }
+  },
+  {
+   "run": "2026-10-25 15:05:51 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80577.04,
+    "ETHUSDT": 2345.0,
+    "BNBUSDT": 743.2,
+    "SOLUSDT": 101.49
+   }
+  },
+  {
+   "run": "2026-10-25 15:07:39 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80610.0,
+    "ETHUSDT": 2347.64,
+    "BNBUSDT": 743.99,
+    "SOLUSDT": 101.58
+   }
+  },
+  {
+   "run": "2026-10-25 15:12:42 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80619.29,
+    "ETHUSDT": 2348.21,
+    "BNBUSDT": 744.12,
+    "SOLUSDT": 101.67
+   }
+  },
+  {
+   "run": "2026-10-25 15:18:18 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80622.4,
+    "ETHUSDT": 2348.45,
+    "BNBUSDT": 744.66,
+    "SOLUSDT": 101.7
+   }
+  },
+  {
+   "run": "2026-10-25 16:05:05 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80644.39,
+    "ETHUSDT": 2346.06,
+    "BNBUSDT": 744.11,
+    "SOLUSDT": 101.63
+   }
+  },
+  {
+   "run": "2026-10-25 16:10:07 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80616.01,
+    "ETHUSDT": 2342.92,
+    "BNBUSDT": 743.59,
+    "SOLUSDT": 101.47
+   }
+  },
+  {
+   "run": "2026-10-25 16:15:08 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80615.66,
+    "ETHUSDT": 2343.34,
+    "BNBUSDT": 744.05,
+    "SOLUSDT": 101.5
+   }
+  },
+  {
+   "run": "2026-10-25 17:30:45 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80200.51,
+    "ETHUSDT": 2326.04,
+    "BNBUSDT": 736.8,
+    "SOLUSDT": 100.66
+   }
+  },
+  {
+   "run": "2026-10-25 17:35:47 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80204.75,
+    "ETHUSDT": 2324.99,
+    "BNBUSDT": 736.14,
+    "SOLUSDT": 100.57
+   }
+  },
+  {
+   "run": "2026-10-25 17:58:31 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80328.31,
+    "ETHUSDT": 2327.69,
+    "BNBUSDT": 737.29,
+    "SOLUSDT": 100.93
+   }
+  },
+  {
+   "run": "2026-10-25 17:58:51 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80328.32,
+    "ETHUSDT": 2327.69,
+    "BNBUSDT": 737.42,
+    "SOLUSDT": 100.94
+   }
+  },
+  {
+   "run": "2026-10-25 18:45:46 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80300.01,
+    "ETHUSDT": 2326.04,
+    "BNBUSDT": 738.37,
+    "SOLUSDT": 100.72
+   }
+  },
+  {
+   "run": "2026-10-25 18:45:53 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80300.0,
+    "ETHUSDT": 2326.03,
+    "BNBUSDT": 738.36,
+    "SOLUSDT": 100.72
+   }
+  },
+  {
+   "run": "2026-10-25 19:01:04 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80375.41,
+    "ETHUSDT": 2331.36,
+    "BNBUSDT": 739.61,
+    "SOLUSDT": 100.91
+   }
+  },
+  {
+   "run": "2026-10-25 19:16:08 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80393.73,
+    "ETHUSDT": 2332.5,
+    "BNBUSDT": 740.84,
+    "SOLUSDT": 100.88
+   }
+  },
+  {
+   "run": "2026-10-25 19:22:22 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80450.01,
+    "ETHUSDT": 2334.03,
+    "BNBUSDT": 741.49,
+    "SOLUSDT": 101.0
+   }
+  },
+  {
+   "run": "2026-10-25 19:38:04 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80400.53,
+    "ETHUSDT": 2329.46,
+    "BNBUSDT": 741.07,
+    "SOLUSDT": 100.71
+   }
+  },
+  {
+   "run": "2026-10-25 21:57:20 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80365.81,
+    "ETHUSDT": 2334.63,
+    "BNBUSDT": 737.2,
+    "SOLUSDT": 100.8
+   }
+  },
+  {
+   "run": "2026-10-26 00:02:49 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80612.93,
+    "ETHUSDT": 2343.99,
+    "BNBUSDT": 742.26,
+    "SOLUSDT": 101.57
+   }
+  },
+  {
+   "run": "2026-10-26 00:18:05 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80622.88,
+    "ETHUSDT": 2347.18,
+    "BNBUSDT": 742.59,
+    "SOLUSDT": 101.53
+   }
+  },
+  {
+   "run": "2026-10-26 00:35:18 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80612.01,
+    "ETHUSDT": 2345.06,
+    "BNBUSDT": 741.38,
+    "SOLUSDT": 101.47
+   }
+  },
+  {
+   "run": "2026-10-26 07:24:06 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80309.49,
+    "ETHUSDT": 2337.21,
+    "BNBUSDT": 740.24,
+    "SOLUSDT": 101.57
+   }
+  },
+  {
+   "run": "2026-10-26 08:01:19 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80167.06,
+    "ETHUSDT": 2330.55,
+    "BNBUSDT": 739.07,
+    "SOLUSDT": 101.43
+   }
+  },
+  {
+   "run": "2026-10-26 08:17:45 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80052.5,
+    "ETHUSDT": 2327.77,
+    "BNBUSDT": 739.01,
+    "SOLUSDT": 101.37
+   }
+  },
+  {
+   "run": "2026-10-26 09:01:29 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80191.16,
+    "ETHUSDT": 2329.93,
+    "BNBUSDT": 741.09,
+    "SOLUSDT": 101.55
+   }
+  },
+  {
+   "run": "2026-10-26 10:40:54 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 79581.72,
+    "ETHUSDT": 2299.58,
+    "BNBUSDT": 735.48,
+    "SOLUSDT": 100.58
+   }
+  },
+  {
+   "run": "2026-10-26 11:11:53 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 79766.84,
+    "ETHUSDT": 2312.59,
+    "BNBUSDT": 737.15,
+    "SOLUSDT": 100.93
+   }
+  },
+  {
+   "run": "2026-10-26 14:11:19 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80080.67,
+    "ETHUSDT": 2318.76,
+    "BNBUSDT": 740.29,
+    "SOLUSDT": 101.04
+   }
+  },
+  {
+   "run": "2026-10-26 16:03:40 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 79916.91,
+    "ETHUSDT": 2311.99,
+    "BNBUSDT": 736.69,
+    "SOLUSDT": 100.5
+   }
+  },
+  {
+   "run": "2026-10-26 16:23:02 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80032.85,
+    "ETHUSDT": 2318.76,
+    "BNBUSDT": 735.71,
+    "SOLUSDT": 100.64
+   }
+  },
+  {
+   "run": "2026-10-26 17:35:12 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80526.01,
+    "ETHUSDT": 2333.7,
+    "BNBUSDT": 739.8,
+    "SOLUSDT": 101.51
+   }
+  },
+  {
+   "run": "2026-10-26 19:12:03 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80260.01,
+    "ETHUSDT": 2324.83,
+    "BNBUSDT": 738.6,
+    "SOLUSDT": 101.14
+   }
+  },
+  {
+   "run": "2026-10-26 19:28:00 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80350.01,
+    "ETHUSDT": 2331.02,
+    "BNBUSDT": 740.3,
+    "SOLUSDT": 101.45
+   }
+  },
+  {
+   "run": "2026-10-27 00:04:45 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80366.17,
+    "ETHUSDT": 2325.77,
+    "BNBUSDT": 743.7,
+    "SOLUSDT": 101.78
+   }
+  },
+  {
+   "run": "2026-10-27 00:40:35 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 79903.62,
+    "ETHUSDT": 2312.56,
+    "BNBUSDT": 740.25,
+    "SOLUSDT": 101.06
+   }
+  },
+  {
+   "run": "2026-10-27 07:13:31 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 79869.4,
+    "ETHUSDT": 2308.62,
+    "BNBUSDT": 740.73,
+    "SOLUSDT": 100.23
+   }
+  },
+  {
+   "run": "2026-10-27 07:35:42 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80152.01,
+    "ETHUSDT": 2321.82,
+    "BNBUSDT": 742.65,
+    "SOLUSDT": 100.9
+   }
+  },
+  {
+   "run": "2026-10-27 08:05:11 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80200.01,
+    "ETHUSDT": 2324.75,
+    "BNBUSDT": 744.06,
+    "SOLUSDT": 101.01
+   }
+  },
+  {
+   "run": "2026-10-27 08:29:12 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80285.0,
+    "ETHUSDT": 2329.5,
+    "BNBUSDT": 745.25,
+    "SOLUSDT": 100.96
+   }
+  },
+  {
+   "run": "2026-10-27 10:25:12 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 80083.38,
+    "ETHUSDT": 2321.57,
+    "BNBUSDT": 742.04,
+    "SOLUSDT": 100.62
+   }
+  },
+  {
+   "run": "2026-10-27 11:47:41 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 79857.08,
+    "ETHUSDT": 2315.88,
+    "BNBUSDT": 739.34,
+    "SOLUSDT": 100.15
+   }
+  },
+  {
+   "run": "2026-10-27 14:11:25 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 79990.02,
+    "ETHUSDT": 2315.3,
+    "BNBUSDT": 738.9,
+    "SOLUSDT": 100.14
+   }
+  },
+  {
+   "run": "2026-10-27 16:11:22 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 79897.75,
+    "ETHUSDT": 2316.49,
+    "BNBUSDT": 736.97,
+    "SOLUSDT": 100.05
+   }
+  },
+  {
+   "run": "2026-10-27 16:31:45 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 79796.25,
+    "ETHUSDT": 2314.03,
+    "BNBUSDT": 736.75,
+    "SOLUSDT": 99.9
+   }
+  },
+  {
+   "run": "2026-10-27 17:20:56 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 79824.26,
+    "ETHUSDT": 2315.37,
+    "BNBUSDT": 737.5,
+    "SOLUSDT": 99.95
+   }
+  },
+  {
+   "run": "2026-10-27 17:39:05 UTC+0800",
+   "bar": "live",
+   "equity": 99.8052,
+   "prices": {
+    "BTCUSDT": 79696.83,
+    "ETHUSDT": 2310.0,
+    "BNBUSDT": 736.25,
+    "SOLUSDT": 99.76
+   }
+  },
+  {
+   "run": "2026-10-27 23:27:02 UTC+0800",
+   "bar": "live",
+   "equity": 99.6585,
+   "prices": {
+    "BTCUSDT": 80530.57,
+    "ETHUSDT": 2346.96,
+    "BNBUSDT": 752.24,
+    "SOLUSDT": 101.1
+   }
+  }
+ ],
+ "halted": false,
+ "last_bar": {
+  "BTCUSDT": 1792861200000,
+  "ETHUSDT": 1792861200000,
+  "BNBUSDT": 1792861200000
+ },
+ "updated": "2026-10-27 23:33:05 UTC+0800",
+ "mode": "every 60s",
+ "cooldown_until": {
+  "BTCUSDT": 1792866755.4193237
+ },
+ "last_prices": {
+  "BTCUSDT": 80400.85,
+  "ETHUSDT": 2341.02,
+  "BNBUSDT": 749.21,
+  "SOLUSDT": 100.85
+ },
+ "last_equity": 99.2651,
+ "ticks": 4643,
+ "hold_entered": true,
+ "day": "2026-10-27",
+ "day_start_equity": 99.8051608087808,
+ "scan": {
+  "BTCUSDT": {
+   "rsi": 58.6,
+   "note": "not eligible (EMA20<=EMA50 & no 24-bar breakout), RSI 58.6 ok",
+   "time": "2026-10-27 23:26:58 UTC+0800"
+  },
+  "ETHUSDT": {
+   "rsi": 61.86,
+   "note": "not eligible (EMA20<=EMA50), RSI 61.9 ok",
+   "time": "2026-10-27 23:26:58 UTC+0800"
+  },
+  "BNBUSDT": {
+   "rsi": 69.49,
+   "note": "eligible, RSI 69.5 ok",
+   "time": "2026-10-27 23:26:58 UTC+0800"
+  },
+  "SOLUSDT": {
+   "rsi": 55.57,
+   "note": "not eligible (EMA20<=EMA50 & mom24<=0 & no 24-bar breakout), RSI 55.6 ok",
+   "time": "2026-10-27 23:26:58 UTC+0800"
+  }
+ },
+ "day_log": [
+  {
+   "day": "2026-10-25",
+   "start": 99.8052,
+   "end": 99.8052,
+   "target_hit": false
+  },
+  {
+   "day": "2026-10-26",
+   "start": 99.8052,
+   "end": 99.8052,
+   "target_hit": false
+  }
+ ]
+}
