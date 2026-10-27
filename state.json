@@ -795,6 +795,17 @@
     "BNBUSDT": 749.5,
     "SOLUSDT": 101.01
    }
+  },
+  {
+   "run": "2026-10-27 23:53:00 UTC+0800",
+   "bar": "actions",
+   "equity": 99.417,
+   "prices": {
+    "BTCUSDT": 80644.32,
+    "ETHUSDT": 2350.37,
+    "BNBUSDT": 750.38,
+    "SOLUSDT": 101.08
+   }
   }
  ],
  "halted": false,
@@ -803,42 +814,46 @@
   "ETHUSDT": 1792861200000,
   "BNBUSDT": 1792861200000
  },
- "updated": "2026-10-27 23:52:05 UTC+0800",
- "mode": "every 60s",
+ "updated": "2026-10-27 23:53:00 UTC+0800",
+ "mode": "GitHub Actions, every ~5 min",
  "cooldown_until": {
   "BTCUSDT": 1792866755.4193237
  },
  "last_prices": {
-  "BTCUSDT": 80687.76,
-  "ETHUSDT": 2353.2,
-  "BNBUSDT": 750.86,
-  "SOLUSDT": 101.13
+  "BTCUSDT": 80644.32,
+  "ETHUSDT": 2350.37,
+  "BNBUSDT": 750.38,
+  "SOLUSDT": 101.08
  },
- "last_equity": 99.4794,
- "ticks": 4662,
+ "last_equity": 99.417,
+ "ticks": 4663,
  "hold_entered": true,
  "day": "2026-10-27",
  "day_start_equity": 99.8051608087808,
  "scan": {
   "BTCUSDT": {
-   "rsi": 58.6,
-   "note": "not eligible (EMA20<=EMA50 & no 24-bar breakout), RSI 58.6 ok",
-   "time": "2026-10-27 23:26:58 UTC+0800"
+   "rsi": 60.25,
+   "note": "not evaluated while holding",
+   "time": "2026-10-27 23:53:00 UTC+0800",
+   "price": 80644.32
   },
   "ETHUSDT": {
-   "rsi": 61.86,
-   "note": "not eligible (EMA20<=EMA50), RSI 61.9 ok",
-   "time": "2026-10-27 23:26:58 UTC+0800"
+   "rsi": 63.02,
+   "note": "not evaluated while holding",
+   "time": "2026-10-27 23:53:00 UTC+0800",
+   "price": 2350.37
   },
   "BNBUSDT": {
-   "rsi": 69.49,
-   "note": "eligible, RSI 69.5 ok",
-   "time": "2026-10-27 23:26:58 UTC+0800"
+   "rsi": 67.45,
+   "note": "holding",
+   "time": "2026-10-27 23:53:00 UTC+0800",
+   "price": 750.38
   },
   "SOLUSDT": {
-   "rsi": 55.57,
-   "note": "not eligible (EMA20<=EMA50 & mom24<=0 & no 24-bar breakout), RSI 55.6 ok",
-   "time": "2026-10-27 23:26:58 UTC+0800"
+   "rsi": 55.39,
+   "note": "not evaluated while holding",
+   "time": "2026-10-27 23:53:00 UTC+0800",
+   "price": 101.08
   }
  },
  "day_log": [
@@ -855,5 +870,9 @@
    "target_hit": false
   }
  ],
- "last_tick_ms": 1793116346830
+ "last_tick_ms": 1793116380032,
+ "last_key": {
+  "BNBUSDT": "HOLDtrend intact, trailing stop #"
+ },
+ "price_source": "https://data-api.binance.vision"
 }
