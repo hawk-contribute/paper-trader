@@ -806,6 +806,17 @@
     "BNBUSDT": 750.38,
     "SOLUSDT": 101.08
    }
+  },
+  {
+   "run": "2026-10-28 04:18:47 UTC+0800",
+   "bar": "actions",
+   "equity": 99.1691,
+   "prices": {
+    "BTCUSDT": 80758.07,
+    "ETHUSDT": 2347.16,
+    "BNBUSDT": 748.47,
+    "SOLUSDT": 101.2
+   }
   }
  ],
  "halted": false,
@@ -814,46 +825,46 @@
   "ETHUSDT": 1792861200000,
   "BNBUSDT": 1792861200000
  },
- "updated": "2026-10-27 23:53:00 UTC+0800",
+ "updated": "2026-10-28 04:18:47 UTC+0800",
  "mode": "GitHub Actions, every ~5 min",
  "cooldown_until": {
   "BTCUSDT": 1792866755.4193237
  },
  "last_prices": {
-  "BTCUSDT": 80644.32,
-  "ETHUSDT": 2350.37,
-  "BNBUSDT": 750.38,
-  "SOLUSDT": 101.08
+  "BTCUSDT": 80758.07,
+  "ETHUSDT": 2347.16,
+  "BNBUSDT": 748.47,
+  "SOLUSDT": 101.2
  },
- "last_equity": 99.417,
- "ticks": 4663,
+ "last_equity": 99.1691,
+ "ticks": 4664,
  "hold_entered": true,
  "day": "2026-10-27",
  "day_start_equity": 99.8051608087808,
  "scan": {
   "BTCUSDT": {
-   "rsi": 60.25,
+   "rsi": 60.57,
    "note": "not evaluated while holding",
-   "time": "2026-10-27 23:53:00 UTC+0800",
-   "price": 80644.32
+   "time": "2026-10-28 04:18:47 UTC+0800",
+   "price": 80758.07
   },
   "ETHUSDT": {
-   "rsi": 63.02,
+   "rsi": 60.06,
    "note": "not evaluated while holding",
-   "time": "2026-10-27 23:53:00 UTC+0800",
-   "price": 2350.37
+   "time": "2026-10-28 04:18:47 UTC+0800",
+   "price": 2347.16
   },
   "BNBUSDT": {
-   "rsi": 67.45,
+   "rsi": 60.84,
    "note": "holding",
-   "time": "2026-10-27 23:53:00 UTC+0800",
-   "price": 750.38
+   "time": "2026-10-28 04:18:47 UTC+0800",
+   "price": 748.47
   },
   "SOLUSDT": {
-   "rsi": 55.39,
+   "rsi": 56.4,
    "note": "not evaluated while holding",
-   "time": "2026-10-27 23:53:00 UTC+0800",
-   "price": 101.08
+   "time": "2026-10-28 04:18:47 UTC+0800",
+   "price": 101.2
   }
  },
  "day_log": [
@@ -870,7 +881,7 @@
    "target_hit": false
   }
  ],
- "last_tick_ms": 1793116380032,
+ "last_tick_ms": 1793132327160,
  "last_key": {
   "BNBUSDT": "HOLDtrend intact, trailing stop #"
  },
