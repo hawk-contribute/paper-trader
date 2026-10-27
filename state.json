@@ -784,6 +784,17 @@
     "BNBUSDT": 752.24,
     "SOLUSDT": 101.1
    }
+  },
+  {
+   "run": "2026-10-27 23:42:05 UTC+0800",
+   "bar": "live",
+   "equity": 99.3028,
+   "prices": {
+    "BTCUSDT": 80568.93,
+    "ETHUSDT": 2348.53,
+    "BNBUSDT": 749.5,
+    "SOLUSDT": 101.01
+   }
   }
  ],
  "halted": false,
@@ -792,19 +803,19 @@
   "ETHUSDT": 1792861200000,
   "BNBUSDT": 1792861200000
  },
- "updated": "2026-10-27 23:34:04 UTC+0800",
+ "updated": "2026-10-27 23:52:05 UTC+0800",
  "mode": "every 60s",
  "cooldown_until": {
   "BTCUSDT": 1792866755.4193237
  },
  "last_prices": {
-  "BTCUSDT": 80383.88,
-  "ETHUSDT": 2340.9,
-  "BNBUSDT": 748.79,
-  "SOLUSDT": 100.81
+  "BTCUSDT": 80687.76,
+  "ETHUSDT": 2353.2,
+  "BNBUSDT": 750.86,
+  "SOLUSDT": 101.13
  },
- "last_equity": 99.2106,
- "ticks": 4644,
+ "last_equity": 99.4794,
+ "ticks": 4662,
  "hold_entered": true,
  "day": "2026-10-27",
  "day_start_equity": 99.8051608087808,
@@ -843,5 +854,6 @@
    "end": 99.8052,
    "target_hit": false
   }
- ]
+ ],
+ "last_tick_ms": 1793116346830
 }

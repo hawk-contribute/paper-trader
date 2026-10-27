@@ -24,6 +24,3 @@ data-api.binance.vision -> api.binance.com -> api.binance.us -> OKX public marke
 (decisions on change/trade, capped ~1.5 MB), `tick.log` (last 3000 lines), `STATUS.md` (human status).
 Migrated from the original box loop on 2026-10-27 (UTC+8).
 
-## Activation pending
-The workflow file is kept at `workflow-template/tick.yml` because the pushing token lacks GitHub's `workflow` scope.
-To activate: copy it to `.github/workflows/tick.yml` (GitHub web: Add file -> Create new file) and re-sync `state.json` from the box first.
