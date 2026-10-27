@@ -792,19 +792,19 @@
   "ETHUSDT": 1792861200000,
   "BNBUSDT": 1792861200000
  },
- "updated": "2026-10-27 23:33:05 UTC+0800",
+ "updated": "2026-10-27 23:34:04 UTC+0800",
  "mode": "every 60s",
  "cooldown_until": {
   "BTCUSDT": 1792866755.4193237
  },
  "last_prices": {
-  "BTCUSDT": 80400.85,
-  "ETHUSDT": 2341.02,
-  "BNBUSDT": 749.21,
-  "SOLUSDT": 100.85
+  "BTCUSDT": 80383.88,
+  "ETHUSDT": 2340.9,
+  "BNBUSDT": 748.79,
+  "SOLUSDT": 100.81
  },
- "last_equity": 99.2651,
- "ticks": 4643,
+ "last_equity": 99.2106,
+ "ticks": 4644,
  "hold_entered": true,
  "day": "2026-10-27",
  "day_start_equity": 99.8051608087808,
