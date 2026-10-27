@@ -185,7 +185,7 @@ def zh(note):
 
 def write_status(st, eq, prices):
     L = ["# 紙上交易狀態（模擬，不用真錢、不下單）", "",
-         f"最後更新：{st['updated'].replace(' UTC+0800', '')}（UTC+8）｜由 GitHub Actions 約每 5 分鐘執行一次｜價格來源 {st.get('price_source')}", "",
+         f"最後更新：{st['updated'].replace(' UTC+0800', '')}（UTC+8）｜由 GitHub Actions 約每 5 分鐘執行一次｜價格來源 {st.get('price_source') or '主機 live_rt.py（遷移前快照）'}", "",
          "| 項目 | 數值 |", "|---|---|",
          f"| 權益 | {eq:.2f} USDT |", f"| 相對起始 100 | {(eq/100-1)*100:+.2f}% |",
          f"| 距 200 USDT 目標進度 | {(eq-100)/100*100:.1f}% |", f"| 現金 | {st['cash']:.2f} USDT |",
