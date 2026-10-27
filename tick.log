@@ -186,3 +186,4 @@
 === migrated to GitHub Actions 2026-10-27 23:52:38 UTC+0800 ===
 2026-10-27 23:53:04 UTC+0800 tick equity 99.4170 cash 1.9961 pos ['BNBUSDT'] src https://data-api.binance.vision  | BNBUSDT HOLD: trend intact, trailing stop 743.9313
 2026-10-28 04:18:51 UTC+0800 tick equity 99.1691 cash 1.9961 pos ['BNBUSDT'] src https://data-api.binance.vision 
+2026-10-28 07:32:32 UTC+0800 tick equity 98.4350 cash 98.4350 pos [] src https://data-api.binance.vision  | BNBUSDT SELL: ATR STOP hit between ticks: 5m bar 2026-10-28 06:35:00 UTC+0800 low 743.4100 <= stop 743.9313 | SCAN FLAT: no eligible uptrend: BTCUSDT: not eligible (no 24-bar breakout), RSI 63.2 ok; ETHUSDT: not eligible (no 24-bar breakout), RSI 60.5 ok; BNBUSDT: not eligible (no 24-bar breakout), RSI 52.4 ok; SOLUSDT: not eligible (EMA20<=EMA50 & no 24-bar breakout), RSI 56.6 ok

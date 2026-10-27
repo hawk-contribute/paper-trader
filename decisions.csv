@@ -160,3 +160,5 @@ run_time,bar_time,symbol,action,reason,fill_price,qty,pnl_usdt
 2026-10-27 23:28:05 UTC+0800,2026-10-27 23:00:00 UTC+0800,BNBUSDT,HOLD,"trend intact, trailing stop 743.9313",,,
 2026-10-27 23:42:05 UTC+0800,2026-10-27 23:00:00 UTC+0800,PORTFOLIO,EQUITY,"HEARTBEAT equity 99.3028 USDT cash 1.9961 positions ['BNBUSDT'] halted=False prices {'BTCUSDT': 80568.93, 'ETHUSDT': 2348.53, 'BNBUSDT': 749.5, 'SOLUSDT': 101.01}",,,
 2026-10-27 23:53:04 UTC+0800,2026-10-27 23:00:00 UTC+0800,BNBUSDT,HOLD,"trend intact, trailing stop 743.9313",,,
+2026-10-28 07:32:32 UTC+0800,2026-10-28 07:00:00 UTC+0800,BNBUSDT,SELL,ATR STOP hit between ticks: 5m bar 2026-10-28 06:35:00 UTC+0800 low 743.4100 <= stop 743.9313,743.559345,0.12982880,-1.3702
+2026-10-28 07:32:32 UTC+0800,2026-10-28 07:32:27 UTC+0800,SCAN,FLAT,"no eligible uptrend: BTCUSDT: not eligible (no 24-bar breakout), RSI 63.2 ok; ETHUSDT: not eligible (no 24-bar breakout), RSI 60.5 ok; BNBUSDT: not eligible (no 24-bar breakout), RSI 52.4 ok; SOLUSDT: not eligible (EMA20<=EMA50 & no 24-bar breakout), RSI 56.6 ok",,,

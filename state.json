@@ -1,18 +1,7 @@
 {
  "strategy": "trend_aggr",
- "cash": 1.9961032161756123,
- "positions": {
-  "BNBUSDT": {
-   "qty": 0.12982880108256595,
-   "entry": 752.61612,
-   "cost": 97.80905759260519,
-   "t": 1793114818905,
-   "bars": 0,
-   "stop": 743.9313105974737,
-   "trail_mult": 3.0,
-   "max_bars": null
-  }
- },
+ "cash": 98.43498608546871,
+ "positions": {},
  "trades": [
   {
    "t": 1792865315611,
@@ -45,6 +34,18 @@
    "usdt": 97.80905759260519,
    "fee": 0.09780905759260519,
    "reason": "strongest uptrend: EMA20>50, close>EMA20, mom24 +1.02%, close>24-bar high 747.4700, RSI 69.5 in filter range [forming bar + live price]"
+  },
+  {
+   "t": 1793143947676,
+   "sym": "BNBUSDT",
+   "side": "SELL",
+   "price": 743.559344942175,
+   "qty": 0.12982880108256595,
+   "usdt": 96.4388828692931,
+   "fee": 0.09653541828758068,
+   "pnl": -1.3701747233120898,
+   "pnl_pct": -1.4008669105259648,
+   "reason": "ATR STOP hit between ticks: 5m bar 2026-10-28 06:35:00 UTC+0800 low 743.4100 <= stop 743.9313"
   }
  ],
  "equity_history": [
@@ -817,6 +818,17 @@
     "BNBUSDT": 748.47,
     "SOLUSDT": 101.2
    }
+  },
+  {
+   "run": "2026-10-28 07:32:27 UTC+0800",
+   "bar": "actions",
+   "equity": 98.435,
+   "prices": {
+    "BTCUSDT": 80904.12,
+    "ETHUSDT": 2349.93,
+    "BNBUSDT": 745.14,
+    "SOLUSDT": 101.28
+   }
   }
  ],
  "halted": false,
@@ -825,46 +837,47 @@
   "ETHUSDT": 1792861200000,
   "BNBUSDT": 1792861200000
  },
- "updated": "2026-10-28 04:18:47 UTC+0800",
+ "updated": "2026-10-28 07:32:27 UTC+0800",
  "mode": "GitHub Actions, every ~5 min",
  "cooldown_until": {
-  "BTCUSDT": 1792866755.4193237
+  "BTCUSDT": 1792866755.4193237,
+  "BNBUSDT": 1793144847.6761
  },
  "last_prices": {
-  "BTCUSDT": 80758.07,
-  "ETHUSDT": 2347.16,
-  "BNBUSDT": 748.47,
-  "SOLUSDT": 101.2
+  "BTCUSDT": 80904.12,
+  "ETHUSDT": 2349.93,
+  "BNBUSDT": 745.14,
+  "SOLUSDT": 101.28
  },
- "last_equity": 99.1691,
- "ticks": 4664,
+ "last_equity": 98.435,
+ "ticks": 4665,
  "hold_entered": true,
  "day": "2026-10-27",
  "day_start_equity": 99.8051608087808,
  "scan": {
   "BTCUSDT": {
-   "rsi": 60.57,
-   "note": "not evaluated while holding",
-   "time": "2026-10-28 04:18:47 UTC+0800",
-   "price": 80758.07
+   "rsi": 63.18,
+   "note": "not eligible (no 24-bar breakout), RSI 63.2 ok",
+   "time": "2026-10-28 07:32:27 UTC+0800",
+   "price": 80904.12
   },
   "ETHUSDT": {
-   "rsi": 60.06,
-   "note": "not evaluated while holding",
-   "time": "2026-10-28 04:18:47 UTC+0800",
-   "price": 2347.16
+   "rsi": 60.52,
+   "note": "not eligible (no 24-bar breakout), RSI 60.5 ok",
+   "time": "2026-10-28 07:32:27 UTC+0800",
+   "price": 2349.93
   },
   "BNBUSDT": {
-   "rsi": 60.84,
-   "note": "holding",
-   "time": "2026-10-28 04:18:47 UTC+0800",
-   "price": 748.47
+   "rsi": 52.42,
+   "note": "not eligible (no 24-bar breakout), RSI 52.4 ok",
+   "time": "2026-10-28 07:32:27 UTC+0800",
+   "price": 745.14
   },
   "SOLUSDT": {
-   "rsi": 56.4,
-   "note": "not evaluated while holding",
-   "time": "2026-10-28 04:18:47 UTC+0800",
-   "price": 101.2
+   "rsi": 56.57,
+   "note": "not eligible (EMA20<=EMA50 & no 24-bar breakout), RSI 56.6 ok",
+   "time": "2026-10-28 07:32:27 UTC+0800",
+   "price": 101.28
   }
  },
  "day_log": [
@@ -881,9 +894,10 @@
    "target_hit": false
   }
  ],
- "last_tick_ms": 1793132327160,
+ "last_tick_ms": 1793143947676,
  "last_key": {
-  "BNBUSDT": "HOLDtrend intact, trailing stop #"
+  "BNBUSDT": "SELLATR STOP hit between ticks: #m bar #-#-# #:#:# UTC+# low # <= stop #",
+  "SCAN": "FLATno eligible uptrend: BTCUSDT: not eligible (no #-bar breakout), RSI # ok; ETHUSDT: not eligible (no #-bar breakout), RSI # ok; BNBUSDT: not eligible (no #-bar breakout), RSI # ok; SOLUSDT: not eligible (EMA#<=EMA# & no #-bar breakout), RSI # ok"
  },
  "price_source": "https://data-api.binance.vision"
 }
