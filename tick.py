@@ -122,18 +122,34 @@ def main():
             bars, ind, i = snap[s]; pos = st["positions"][s]; px = prices[s]
             if pos.get("stop", 0) <= 0 or not pos.get("trail_mult"):
                 pos["stop"] = px - P["trail_atr"]*ind["atr"][i]; pos["trail_mult"] = P["trail_atr"]
-            # (a) stop hit between ticks? scan 5m lows since previous tick (before ratcheting the stop)
+            ptp = CFG.get("partial_take_profit") or {}
+            tp_on = bool(ptp.get("enabled")) and not pos.get("tp1_done")
+            tp_px = pos["entry"]*(1+float(ptp.get("gain_pct", 5))/100); frac = float(ptp.get("sell_fraction", 0.5))
+            tp_reason = f"TAKE PROFIT +{ptp.get('gain_pct', 5):g}%: sold {frac*100:.0f}%"
+            def do_tp(fill_px, why):
+                tr = core._sell_partial(st, s, fill_px, tms, f"{tp_reason} ({why}; target {tp_px:.4f})", frac)
+                pos["tp1_done"] = True; record(s, "SELL_PARTIAL", tr["reason"], tr, bars[i]["t"])
+            stopped = False
+            # (a) between ticks: walk 5m bars since previous tick in time order (before ratcheting the stop).
+            #     Stop is checked before take-profit within the same bar (conservative).
             if CFG.get("intrabar_stop_check_5m", True):
                 c5, f5 = fetch_klines(s, "5m", limit=100, start_ms=max(prev_tick_ms - 300000, pos["t"]))
-                hit = next((b for b in c5 + ([f5] if f5 else []) if b["ct"] >= prev_tick_ms and b["t"] >= pos["t"] // 300000 * 300000 and b["l"] <= pos["stop"]), None)
-                if hit:
-                    fill = min(pos["stop"], hit["o"])
-                    tr = core._sell(st, s, fill, tms, f"ATR STOP hit between ticks: 5m bar {ts(hit['t']/1000)} low {hit['l']:.4f} <= stop {pos['stop']:.4f}")
-                    st["cooldown_until"][s] = t0 + CFG.get("cooldown_sec", 900); record(s, "SELL", tr["reason"], tr, bars[i]["t"]); continue
-            # (b) stop vs latest price
+                for b5 in c5 + ([f5] if f5 else []):
+                    if b5["ct"] < prev_tick_ms or b5["t"] < pos["t"] // 300000 * 300000: continue
+                    if b5["l"] <= pos["stop"]:
+                        fill = min(pos["stop"], b5["o"])
+                        tr = core._sell(st, s, fill, tms, f"ATR STOP hit between ticks: 5m bar {ts(b5['t']/1000)} low {b5['l']:.4f} <= stop {pos['stop']:.4f}")
+                        st["cooldown_until"][s] = t0 + CFG.get("cooldown_sec", 900); record(s, "SELL", tr["reason"], tr, bars[i]["t"])
+                        stopped = True; break
+                    if tp_on and b5["h"] >= tp_px:
+                        do_tp(max(tp_px, b5["o"]), f"5m bar {ts(b5['t']/1000)} high {b5['h']:.4f}"); tp_on = False
+                if stopped: continue
+            # (b) latest price: stop first, then take-profit
             if px <= pos["stop"]:
                 tr = core._sell(st, s, px, tms, f"TRAILING/ATR STOP: live {px:.4f} <= stop {pos['stop']:.4f}")
                 st["cooldown_until"][s] = t0 + CFG.get("cooldown_sec", 900); record(s, "SELL", tr["reason"], tr, bars[i]["t"]); continue
+            if tp_on and px >= tp_px:
+                do_tp(px, f"live {px:.4f}"); tp_on = False
             ex, why = aggr.exit_signal(bars, ind, i, P, pos)
             if ex:
                 tr = core._sell(st, s, px, tms, why + " [forming bar + live price]")
@@ -192,10 +208,11 @@ def write_status(st, eq, prices):
          f"| 熔斷（低於 70 USDT） | {'已觸發，停止交易' if st['halted'] else '未觸發'} |", ""]
     L += ["## 持倉", ""]
     if st["positions"]:
-        L += ["| 幣種 | 數量 | 進場價 | 現價 | 市值 | 損益 | 停損價 |", "|---|---:|---:|---:|---:|---:|---:|"]
+        ptp = CFG.get("partial_take_profit") or {}
+        L += ["| 幣種 | 數量 | 進場價 | 現價 | 市值 | 損益 | 停損價 | 停利目標（+%g%%） | 已賣一半？ |" % float(ptp.get("gain_pct", 5)), "|---|---:|---:|---:|---:|---:|---:|---:|---|"]
         for s, p in st["positions"].items():
             v = p["qty"]*prices[s]
-            L.append(f"| {s} | {p['qty']:.6f} | {p['entry']:.4f} | {prices[s]:.4f} | {v:.2f} | {(v/p['cost']-1)*100:+.2f}% | {p['stop']:.4f}（{(p['stop']/prices[s]-1)*100:+.2f}%） |")
+            L.append(f"| {s} | {p['qty']:.6f} | {p['entry']:.4f} | {prices[s]:.4f} | {v:.2f} | {(v/p['cost']-1)*100:+.2f}% | {p['stop']:.4f}（{(p['stop']/prices[s]-1)*100:+.2f}%） | {p['entry']*(1+float(ptp.get('gain_pct', 5))/100):.4f} | {'是' if p.get('tp1_done') else ('否' if ptp.get('enabled') else '停用')} |")
     else:
         L.append("目前空手（全部現金）。")
     L += ["", "## 最新掃描", "", "| 幣種 | 價格 | RSI(14) | 說明 |", "|---|---:|---:|---|"]
@@ -203,9 +220,9 @@ def write_status(st, eq, prices):
         L.append(f"| {s} | {v.get('price', prices.get(s, 0)):,.4f} | {v['rsi']:.1f} | {zh(v['note'])} |")
     L += ["", "## 最近交易", "", "| 時間（UTC+8） | 幣種 | 方向 | 成交價 | 金額 USDT | 損益 USDT |", "|---|---|---|---:|---:|---:|"]
     for x in st["trades"][-8:][::-1]:
-        L.append(f"| {time.strftime('%Y-%m-%d %H:%M', time.gmtime(x['t']/1000 + TZ8))} | {x['sym']} | {'買入' if x['side']=='BUY' else '賣出'} | {x['price']:.4f} | {x['usdt']:.2f} | {x['pnl']:+.2f} |" if 'pnl' in x else
-                 f"| {time.strftime('%Y-%m-%d %H:%M', time.gmtime(x['t']/1000 + TZ8))} | {x['sym']} | {'買入' if x['side']=='BUY' else '賣出'} | {x['price']:.4f} | {x['usdt']:.2f} | |")
-    L += ["", "策略：trend_aggr 1h_base（EMA20/50、24 小時動能與突破、RSI 50–75 濾網、2×ATR 初始停損、3×ATR 追蹤停損、單一幣種約 98% 權益、出場後冷卻 15 分鐘、每筆 0.1% 手續費 + 0.05% 滑價）。", ""]
+        L.append(f"| {time.strftime('%Y-%m-%d %H:%M', time.gmtime(x['t']/1000 + TZ8))} | {x['sym']} | {'買入' if x['side']=='BUY' else ('賣出（部分）' if x.get('partial') else '賣出')} | {x['price']:.4f} | {x['usdt']:.2f} | {x['pnl']:+.2f} |" if 'pnl' in x else
+                 f"| {time.strftime('%Y-%m-%d %H:%M', time.gmtime(x['t']/1000 + TZ8))} | {x['sym']} | {'買入' if x['side']=='BUY' else ('賣出（部分）' if x.get('partial') else '賣出')} | {x['price']:.4f} | {x['usdt']:.2f} | |")
+    L += ["", "策略：trend_aggr 1h_base（EMA20/50、24 小時動能與突破、RSI 50–75 濾網、2×ATR 初始停損、3×ATR 追蹤停損、單一幣種約 98% 權益、漲 5% 先賣一半（剩餘部位沿用原出場規則）、全部出場後冷卻 15 分鐘、每筆 0.1% 手續費 + 0.05% 滑價）。", ""]
     open(STATUS, "w").write("\n".join(L))
 
 if __name__ == "__main__":

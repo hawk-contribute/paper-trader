@@ -2,7 +2,17 @@
  "strategy": "trend_aggr",
  "variant": "1h_base",
  "daily_target_pct": null,
- "rsi_filter": {"enabled": true, "period": 14, "min": 50, "max": 75},
+ "rsi_filter": {
+  "enabled": true,
+  "period": 14,
+  "min": 50,
+  "max": 75
+ },
  "cooldown_sec": 900,
- "intrabar_stop_check_5m": true
+ "intrabar_stop_check_5m": true,
+ "partial_take_profit": {
+  "enabled": true,
+  "gain_pct": 5,
+  "sell_fraction": 0.5
+ }
 }

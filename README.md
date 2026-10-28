@@ -13,6 +13,8 @@ and commits `state.json`, `decisions.csv`, `tick.log`, `STATUS.md` back to the r
 - Exit: ATR stop (2x ATR initial, 3x ATR trailing, ratchets up only) or EMA20 < EMA50. 15-min cooldown per coin after an exit.
 - Because ticks are ~5 min apart, each tick also scans the held coin's 5m klines since the previous tick; if any 5m low touched
   the stop, the position is sold at the stop price (or at that 5m bar's open if it gapped below). Toggle: `intrabar_stop_check_5m`.
+- 分批停利（partial take-profit）：持倉價格達進場價 +5% 時先賣出一半（每個持倉只觸發一次，`tp1_done`）。即時價格達標以即時價成交；兩次執行之間若 5 分鐘 K 線最高價達標，以目標價成交（若開盤即跳空高於目標，以該根開盤價成交）。同一根 5 分鐘 K 線同時碰到停損與停利時，保守假設先停損。剩下一半沿用原本出場規則（2×ATR 初始／3×ATR 追蹤停損、EMA20 跌破 EMA50、70 USDT 熔斷），停損不上移到成本價。成本依比例分攤計算損益；冷卻 15 分鐘只在全部出場後開始。設定：`config.json` 的 `partial_take_profit`。
+  (Partial TP: at entry +5% sell 50% once per position; rest keeps existing exits; cost basis split proportionally.)
 - Fills: 0.1% fee + 0.05% adverse slippage. Kill-switch: equity < 70 USDT -> sell all, halt permanently.
 - No daily profit target.
 

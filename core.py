@@ -167,6 +167,17 @@ def _buy(state, sym, price, t, reason, extra, prices):
     tr = dict(t=t, sym=sym, side="BUY", price=fill, qty=qty, usdt=alloc, fee=fee, reason=reason)
     state["trades"].append(tr); return tr
 
+def _sell_partial(state, sym, price, t, reason, frac):
+    """Sell `frac` of a position; cost basis split proportionally. Position stays open with the rest."""
+    pos = state["positions"][sym]
+    q = pos["qty"]*frac; cost = pos["cost"]*frac
+    fill = price*(1-SLIPPAGE); gross = q*fill; fee = gross*FEE
+    state["cash"] += gross-fee
+    pos["qty"] -= q; pos["cost"] -= cost
+    pnl = gross-fee-cost
+    tr = dict(t=t, sym=sym, side="SELL", partial=True, fraction=frac, price=fill, qty=q, usdt=gross-fee, fee=fee, pnl=pnl, pnl_pct=pnl/cost*100, reason=reason)
+    state["trades"].append(tr); return tr
+
 def _sell(state, sym, price, t, reason):
     pos = state["positions"].pop(sym)
     fill = price*(1-SLIPPAGE); gross = pos["qty"]*fill; fee = gross*FEE
