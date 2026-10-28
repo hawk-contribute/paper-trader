@@ -1,18 +1,7 @@
 {
  "strategy": "trend_aggr",
- "cash": 1.9686997217093705,
- "positions": {
-  "SOLUSDT": {
-   "qty": 0.938167519701682,
-   "entry": 102.721335,
-   "cost": 96.46628636375934,
-   "t": 1793177907056,
-   "bars": 0,
-   "stop": 101.38414189822008,
-   "trail_mult": 3.0,
-   "max_bars": null
-  }
- },
+ "cash": 96.94138325768775,
+ "positions": {},
  "trades": [
   {
    "t": 1792865315611,
@@ -67,6 +56,18 @@
    "usdt": 96.46628636375934,
    "fee": 0.09646628636375934,
    "reason": "strongest uptrend: EMA20>50, close>EMA20, mom24 +2.71%, close>24-bar high 102.4400, RSI 70.3 in filter range [forming bar + live price]"
+  },
+  {
+   "t": 1793202538595,
+   "sym": "SOLUSDT",
+   "side": "SELL",
+   "price": 101.33344982727097,
+   "qty": 0.938167519701682,
+   "usdt": 94.97268353597838,
+   "fee": 0.09506775128726563,
+   "pnl": -1.4936028277809612,
+   "pnl_pct": -1.5483158770607357,
+   "reason": "ATR STOP hit between ticks: 5m bar 2026-10-28 21:15:00 UTC+0800 low 101.3000 <= stop 101.3841"
   }
  ],
  "equity_history": [
@@ -894,6 +895,17 @@
     "BNBUSDT": 750.9,
     "SOLUSDT": 102.67
    }
+  },
+  {
+   "run": "2026-10-28 23:48:58 UTC+0800",
+   "bar": "actions",
+   "equity": 96.9414,
+   "prices": {
+    "BTCUSDT": 80525.01,
+    "ETHUSDT": 2331.95,
+    "BNBUSDT": 749.17,
+    "SOLUSDT": 100.93
+   }
   }
  ],
  "halted": false,
@@ -902,47 +914,48 @@
   "ETHUSDT": 1792861200000,
   "BNBUSDT": 1792861200000
  },
- "updated": "2026-10-28 16:58:27 UTC+0800",
+ "updated": "2026-10-28 23:48:58 UTC+0800",
  "mode": "GitHub Actions, every ~5 min",
  "cooldown_until": {
   "BTCUSDT": 1792866755.4193237,
-  "BNBUSDT": 1793144847.6761
+  "BNBUSDT": 1793144847.6761,
+  "SOLUSDT": 1793203438.5957665
  },
  "last_prices": {
-  "BTCUSDT": 81522.46,
-  "ETHUSDT": 2374.13,
-  "BNBUSDT": 750.9,
-  "SOLUSDT": 102.67
+  "BTCUSDT": 80525.01,
+  "ETHUSDT": 2331.95,
+  "BNBUSDT": 749.17,
+  "SOLUSDT": 100.93
  },
- "last_equity": 98.2904,
- "ticks": 4669,
+ "last_equity": 96.9414,
+ "ticks": 4670,
  "hold_entered": true,
  "day": "2026-10-27",
  "day_start_equity": 99.8051608087808,
  "scan": {
   "BTCUSDT": {
-   "rsi": 69.3,
-   "note": "eligible, RSI 69.3 ok",
-   "time": "2026-10-28 16:58:27 UTC+0800",
-   "price": 81522.46
+   "rsi": 43.11,
+   "note": "RSI14 43.1 outside (50, 75)",
+   "time": "2026-10-28 23:48:58 UTC+0800",
+   "price": 80525.01
   },
   "ETHUSDT": {
-   "rsi": 69.01,
-   "note": "eligible, RSI 69.0 ok",
-   "time": "2026-10-28 16:58:27 UTC+0800",
-   "price": 2374.13
+   "rsi": 40.33,
+   "note": "RSI14 40.3 outside (50, 75)",
+   "time": "2026-10-28 23:48:58 UTC+0800",
+   "price": 2331.95
   },
   "BNBUSDT": {
-   "rsi": 63.49,
-   "note": "not eligible (no 24-bar breakout), RSI 63.5 ok",
-   "time": "2026-10-28 16:58:27 UTC+0800",
-   "price": 750.9
+   "rsi": 51.06,
+   "note": "not eligible (close<=EMA20 & mom24<=0 & no 24-bar breakout), RSI 51.1 ok",
+   "time": "2026-10-28 23:48:58 UTC+0800",
+   "price": 749.17
   },
   "SOLUSDT": {
-   "rsi": 70.26,
-   "note": "eligible, RSI 70.3 ok",
-   "time": "2026-10-28 16:58:27 UTC+0800",
-   "price": 102.67
+   "rsi": 41.43,
+   "note": "RSI14 41.4 outside (50, 75)",
+   "time": "2026-10-28 23:48:58 UTC+0800",
+   "price": 100.93
   }
  },
  "day_log": [
@@ -959,11 +972,11 @@
    "target_hit": false
   }
  ],
- "last_tick_ms": 1793177907056,
+ "last_tick_ms": 1793202538595,
  "last_key": {
   "BNBUSDT": "SELLATR STOP hit between ticks: #m bar #-#-# #:#:# UTC+# low # <= stop #",
-  "SCAN": "FLATno eligible uptrend: BTCUSDT: not eligible (no #-bar breakout), RSI # ok; ETHUSDT: not eligible (no #-bar breakout), RSI # ok; BNBUSDT: not eligible (no #-bar breakout), RSI # ok; SOLUSDT: not eligible (no #-bar breakout), RSI # ok",
-  "SOLUSDT": "BUYstrongest uptrend: EMA#>#, close>EMA#, mom# +#%, close>#-bar high #, RSI # in filter range [forming bar + live price]"
+  "SCAN": "FLATno eligible uptrend: BNBUSDT: not eligible (close<=EMA# & mom#<=# & no #-bar breakout), RSI # ok; BTCUSDT: RSI# # outside (#, #); ETHUSDT: RSI# # outside (#, #); SOLUSDT: RSI# # outside (#, #)",
+  "SOLUSDT": "SELLATR STOP hit between ticks: #m bar #-#-# #:#:# UTC+# low # <= stop #"
  },
  "price_source": "https://data-api.binance.vision"
 }
