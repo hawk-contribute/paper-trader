@@ -1,7 +1,18 @@
 {
  "strategy": "trend_aggr",
- "cash": 98.43498608546871,
- "positions": {},
+ "cash": 1.9686997217093705,
+ "positions": {
+  "SOLUSDT": {
+   "qty": 0.938167519701682,
+   "entry": 102.721335,
+   "cost": 96.46628636375934,
+   "t": 1793177907056,
+   "bars": 0,
+   "stop": 101.38414189822008,
+   "trail_mult": 3.0,
+   "max_bars": null
+  }
+ },
  "trades": [
   {
    "t": 1792865315611,
@@ -46,6 +57,16 @@
    "pnl": -1.3701747233120898,
    "pnl_pct": -1.4008669105259648,
    "reason": "ATR STOP hit between ticks: 5m bar 2026-10-28 06:35:00 UTC+0800 low 743.4100 <= stop 743.9313"
+  },
+  {
+   "t": 1793177907056,
+   "sym": "SOLUSDT",
+   "side": "BUY",
+   "price": 102.721335,
+   "qty": 0.938167519701682,
+   "usdt": 96.46628636375934,
+   "fee": 0.09646628636375934,
+   "reason": "strongest uptrend: EMA20>50, close>EMA20, mom24 +2.71%, close>24-bar high 102.4400, RSI 70.3 in filter range [forming bar + live price]"
   }
  ],
  "equity_history": [
@@ -862,6 +883,17 @@
     "BNBUSDT": 744.89,
     "SOLUSDT": 101.68
    }
+  },
+  {
+   "run": "2026-10-28 16:58:27 UTC+0800",
+   "bar": "actions",
+   "equity": 98.2904,
+   "prices": {
+    "BTCUSDT": 81522.46,
+    "ETHUSDT": 2374.13,
+    "BNBUSDT": 750.9,
+    "SOLUSDT": 102.67
+   }
   }
  ],
  "halted": false,
@@ -870,47 +902,47 @@
   "ETHUSDT": 1792861200000,
   "BNBUSDT": 1792861200000
  },
- "updated": "2026-10-28 10:37:58 UTC+0800",
+ "updated": "2026-10-28 16:58:27 UTC+0800",
  "mode": "GitHub Actions, every ~5 min",
  "cooldown_until": {
   "BTCUSDT": 1792866755.4193237,
   "BNBUSDT": 1793144847.6761
  },
  "last_prices": {
-  "BTCUSDT": 80941.79,
-  "ETHUSDT": 2358.16,
-  "BNBUSDT": 744.89,
-  "SOLUSDT": 101.68
+  "BTCUSDT": 81522.46,
+  "ETHUSDT": 2374.13,
+  "BNBUSDT": 750.9,
+  "SOLUSDT": 102.67
  },
- "last_equity": 98.435,
- "ticks": 4668,
+ "last_equity": 98.2904,
+ "ticks": 4669,
  "hold_entered": true,
  "day": "2026-10-27",
  "day_start_equity": 99.8051608087808,
  "scan": {
   "BTCUSDT": {
-   "rsi": 62.02,
-   "note": "not eligible (no 24-bar breakout), RSI 62.0 ok",
-   "time": "2026-10-28 10:37:58 UTC+0800",
-   "price": 80941.79
+   "rsi": 69.3,
+   "note": "eligible, RSI 69.3 ok",
+   "time": "2026-10-28 16:58:27 UTC+0800",
+   "price": 81522.46
   },
   "ETHUSDT": {
-   "rsi": 63.85,
-   "note": "not eligible (no 24-bar breakout), RSI 63.8 ok",
-   "time": "2026-10-28 10:37:58 UTC+0800",
-   "price": 2358.16
+   "rsi": 69.01,
+   "note": "eligible, RSI 69.0 ok",
+   "time": "2026-10-28 16:58:27 UTC+0800",
+   "price": 2374.13
   },
   "BNBUSDT": {
-   "rsi": 51.65,
-   "note": "not eligible (no 24-bar breakout), RSI 51.7 ok",
-   "time": "2026-10-28 10:37:58 UTC+0800",
-   "price": 744.89
+   "rsi": 63.49,
+   "note": "not eligible (no 24-bar breakout), RSI 63.5 ok",
+   "time": "2026-10-28 16:58:27 UTC+0800",
+   "price": 750.9
   },
   "SOLUSDT": {
-   "rsi": 61.24,
-   "note": "not eligible (no 24-bar breakout), RSI 61.2 ok",
-   "time": "2026-10-28 10:37:58 UTC+0800",
-   "price": 101.68
+   "rsi": 70.26,
+   "note": "eligible, RSI 70.3 ok",
+   "time": "2026-10-28 16:58:27 UTC+0800",
+   "price": 102.67
   }
  },
  "day_log": [
@@ -927,10 +959,11 @@
    "target_hit": false
   }
  ],
- "last_tick_ms": 1793155078319,
+ "last_tick_ms": 1793177907056,
  "last_key": {
   "BNBUSDT": "SELLATR STOP hit between ticks: #m bar #-#-# #:#:# UTC+# low # <= stop #",
-  "SCAN": "FLATno eligible uptrend: BTCUSDT: not eligible (no #-bar breakout), RSI # ok; ETHUSDT: not eligible (no #-bar breakout), RSI # ok; BNBUSDT: not eligible (no #-bar breakout), RSI # ok; SOLUSDT: not eligible (no #-bar breakout), RSI # ok"
+  "SCAN": "FLATno eligible uptrend: BTCUSDT: not eligible (no #-bar breakout), RSI # ok; ETHUSDT: not eligible (no #-bar breakout), RSI # ok; BNBUSDT: not eligible (no #-bar breakout), RSI # ok; SOLUSDT: not eligible (no #-bar breakout), RSI # ok",
+  "SOLUSDT": "BUYstrongest uptrend: EMA#>#, close>EMA#, mom# +#%, close>#-bar high #, RSI # in filter range [forming bar + live price]"
  },
  "price_source": "https://data-api.binance.vision"
 }
