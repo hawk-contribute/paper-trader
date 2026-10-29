@@ -950,6 +950,17 @@
     "BNBUSDT": 741.72,
     "SOLUSDT": 100.59
    }
+  },
+  {
+   "run": "2026-10-30 02:42:03 UTC+0800",
+   "bar": "actions",
+   "equity": 96.9414,
+   "prices": {
+    "BTCUSDT": 80633.41,
+    "ETHUSDT": 2326.5,
+    "BNBUSDT": 743.67,
+    "SOLUSDT": 100.4
+   }
   }
  ],
  "halted": false,
@@ -958,7 +969,7 @@
   "ETHUSDT": 1792861200000,
   "BNBUSDT": 1792861200000
  },
- "updated": "2026-10-29 20:52:15 UTC+0800",
+ "updated": "2026-10-30 02:42:03 UTC+0800",
  "mode": "GitHub Actions, every ~5 min",
  "cooldown_until": {
   "BTCUSDT": 1792866755.4193237,
@@ -966,40 +977,40 @@
   "SOLUSDT": 1793203438.5957665
  },
  "last_prices": {
-  "BTCUSDT": 80084.28,
-  "ETHUSDT": 2323.07,
-  "BNBUSDT": 741.72,
-  "SOLUSDT": 100.59
+  "BTCUSDT": 80633.41,
+  "ETHUSDT": 2326.5,
+  "BNBUSDT": 743.67,
+  "SOLUSDT": 100.4
  },
  "last_equity": 96.9414,
- "ticks": 4674,
+ "ticks": 4675,
  "hold_entered": true,
  "day": "2026-10-27",
  "day_start_equity": 99.8051608087808,
  "scan": {
   "BTCUSDT": {
-   "rsi": 41.93,
-   "note": "RSI14 41.9 outside (50, 75)",
-   "time": "2026-10-29 20:52:15 UTC+0800",
-   "price": 80084.28
+   "rsi": 49.65,
+   "note": "RSI14 49.7 outside (50, 75)",
+   "time": "2026-10-30 02:42:03 UTC+0800",
+   "price": 80633.41
   },
   "ETHUSDT": {
-   "rsi": 44.31,
-   "note": "RSI14 44.3 outside (50, 75)",
-   "time": "2026-10-29 20:52:15 UTC+0800",
-   "price": 2323.07
+   "rsi": 45.93,
+   "note": "RSI14 45.9 outside (50, 75)",
+   "time": "2026-10-30 02:42:03 UTC+0800",
+   "price": 2326.5
   },
   "BNBUSDT": {
-   "rsi": 40.99,
-   "note": "RSI14 41.0 outside (50, 75)",
-   "time": "2026-10-29 20:52:15 UTC+0800",
-   "price": 741.72
+   "rsi": 43.77,
+   "note": "RSI14 43.8 outside (50, 75)",
+   "time": "2026-10-30 02:42:03 UTC+0800",
+   "price": 743.67
   },
   "SOLUSDT": {
-   "rsi": 46.43,
-   "note": "RSI14 46.4 outside (50, 75)",
-   "time": "2026-10-29 20:52:15 UTC+0800",
-   "price": 100.59
+   "rsi": 44.66,
+   "note": "RSI14 44.7 outside (50, 75)",
+   "time": "2026-10-30 02:42:03 UTC+0800",
+   "price": 100.4
   }
  },
  "day_log": [
@@ -1016,7 +1027,7 @@
    "target_hit": false
   }
  ],
- "last_tick_ms": 1793278335802,
+ "last_tick_ms": 1793299323955,
  "last_key": {
   "BNBUSDT": "SELLATR STOP hit between ticks: #m bar #-#-# #:#:# UTC+# low # <= stop #",
   "SCAN": "FLATno eligible uptrend: BTCUSDT: RSI# # outside (#, #); ETHUSDT: RSI# # outside (#, #); BNBUSDT: RSI# # outside (#, #); SOLUSDT: RSI# # outside (#, #)",
