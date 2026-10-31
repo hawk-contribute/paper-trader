@@ -203,3 +203,4 @@
 2026-10-30 23:25:24 UTC+0800 tick equity 96.9414 cash 96.9414 pos [] src https://data-api.binance.vision 
 2026-10-31 03:59:02 UTC+0800 tick equity 96.9414 cash 96.9414 pos [] src https://data-api.binance.vision 
 2026-10-31 07:31:37 UTC+0800 tick equity 96.9414 cash 96.9414 pos [] src https://data-api.binance.vision 
+2026-10-31 10:40:35 UTC+0800 tick equity 96.9414 cash 96.9414 pos [] src https://data-api.binance.vision  | SCAN FLAT: no eligible uptrend: SOLUSDT: not eligible (EMA20<=EMA50 & no 24-bar breakout), RSI 52.7 ok; BTCUSDT: RSI14 45.9 outside (50, 75); ETHUSDT: RSI14 48.6 outside (50, 75); BNBUSDT: RSI14 46.3 outside (50, 75)
