@@ -1522,6 +1522,17 @@
     "BNBUSDT": 689.08,
     "SOLUSDT": 86.12
    }
+  },
+  {
+   "run": "2026-11-10 18:52:18 UTC+0800",
+   "bar": "actions",
+   "equity": 95.9956,
+   "prices": {
+    "BTCUSDT": 74249.99,
+    "ETHUSDT": 2090.83,
+    "BNBUSDT": 688.15,
+    "SOLUSDT": 84.72
+   }
   }
  ],
  "halted": false,
@@ -1530,7 +1541,7 @@
   "ETHUSDT": 1792861200000,
   "BNBUSDT": 1792861200000
  },
- "updated": "2026-11-10 10:58:22 UTC+0800",
+ "updated": "2026-11-10 18:52:18 UTC+0800",
  "mode": "GitHub Actions, every ~5 min",
  "cooldown_until": {
   "BTCUSDT": 1793608873.5091162,
@@ -1538,40 +1549,40 @@
   "SOLUSDT": 1793203438.5957665
  },
  "last_prices": {
-  "BTCUSDT": 74840.0,
-  "ETHUSDT": 2121.13,
-  "BNBUSDT": 689.08,
-  "SOLUSDT": 86.12
+  "BTCUSDT": 74249.99,
+  "ETHUSDT": 2090.83,
+  "BNBUSDT": 688.15,
+  "SOLUSDT": 84.72
  },
  "last_equity": 95.9956,
- "ticks": 4724,
+ "ticks": 4725,
  "hold_entered": true,
  "day": "2026-10-27",
  "day_start_equity": 99.8051608087808,
  "scan": {
   "BTCUSDT": {
-   "rsi": 47.2,
-   "note": "RSI14 47.2 outside (50, 75)",
-   "time": "2026-11-10 10:58:22 UTC+0800",
-   "price": 74840.0
+   "rsi": 39.21,
+   "note": "RSI14 39.2 outside (50, 75)",
+   "time": "2026-11-10 18:52:18 UTC+0800",
+   "price": 74249.99
   },
   "ETHUSDT": {
-   "rsi": 39.34,
-   "note": "RSI14 39.3 outside (50, 75)",
-   "time": "2026-11-10 10:58:22 UTC+0800",
-   "price": 2121.13
+   "rsi": 29.86,
+   "note": "RSI14 29.9 outside (50, 75)",
+   "time": "2026-11-10 18:52:18 UTC+0800",
+   "price": 2090.83
   },
   "BNBUSDT": {
-   "rsi": 50.32,
-   "note": "not eligible (EMA20<=EMA50 & mom24<=0 & no 24-bar breakout), RSI 50.3 ok",
-   "time": "2026-11-10 10:58:22 UTC+0800",
-   "price": 689.08
+   "rsi": 46.32,
+   "note": "RSI14 46.3 outside (50, 75)",
+   "time": "2026-11-10 18:52:18 UTC+0800",
+   "price": 688.15
   },
   "SOLUSDT": {
-   "rsi": 40.83,
-   "note": "RSI14 40.8 outside (50, 75)",
-   "time": "2026-11-10 10:58:22 UTC+0800",
-   "price": 86.12
+   "rsi": 30.23,
+   "note": "RSI14 30.2 outside (50, 75)",
+   "time": "2026-11-10 18:52:18 UTC+0800",
+   "price": 84.72
   }
  },
  "day_log": [
@@ -1588,10 +1599,10 @@
    "target_hit": false
   }
  ],
- "last_tick_ms": 1794279502819,
+ "last_tick_ms": 1794307938242,
  "last_key": {
   "BNBUSDT": "SELLATR STOP hit between ticks: #m bar #-#-# #:#:# UTC+# low # <= stop #",
-  "SCAN": "FLATno eligible uptrend: BNBUSDT: not eligible (EMA#<=EMA# & mom#<=# & no #-bar breakout), RSI # ok; BTCUSDT: RSI# # outside (#, #); ETHUSDT: RSI# # outside (#, #); SOLUSDT: RSI# # outside (#, #)",
+  "SCAN": "FLATno eligible uptrend: BTCUSDT: RSI# # outside (#, #); ETHUSDT: RSI# # outside (#, #); BNBUSDT: RSI# # outside (#, #); SOLUSDT: RSI# # outside (#, #)",
   "SOLUSDT": "SELLATR STOP hit between ticks: #m bar #-#-# #:#:# UTC+# low # <= stop #",
   "BTCUSDT": "SELLATR STOP hit between ticks: #m bar #-#-# #:#:# UTC+# low # <= stop #"
  },
